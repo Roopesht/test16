@@ -1,6 +1,3 @@
-//Updates the timer every milli-second 
-// render the display as Timer: 0.000 seconds
-// Render the milli seconds in 3 decimal places
 
 
 import { useState, useEffect } from 'react';
