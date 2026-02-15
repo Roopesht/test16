@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My First Interactive Page</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>first</li>
+        </ul>
+        <h1>Temperature converter</h1>
+        <input type="number" id="celsius" placeholder="Enter temperature in Celsius"><br>
+        <button style="background-color: blue; color:white" onclick="convertToFahrenheit()">Convert to
+            Fahrenheit</button>
+        <button style="background-color: red; color:white" onclick="test()">Test</button>
+        <button style="background-color: green; color:white" onclick="add()">add</button>
+    </div>
+
+    <div>
+        <p id="result"></p>
+    </div>
+</body>
+
+<script>
+    h1 = document.querySelector('h1');
+    h1.addEventListener('mouseover', function () {
+        h1.style.backgroundColor = 'yellow';
+    });
+    h1.addEventListener('mouseleave', function () {
+        h1.style.backgroundColor = 'white';
+    });
+
+    function add() {
+        var temp = document.querySelector('#celsius').value;
+       
+
+        var ul = document.querySelector('ul');
+        var li = document.createElement('li');
+        li.textContent = temp;
+        li.style.color = 'blue';
+        ul.appendChild(li);
+    }
+
+    function test() {
+        console.log('First');
+        setTimeout(() => console.log('Second'), 1000);
+        console.log('Third');
+    }
+
+    function check() {
+        alert('You have entered a value in the input field');
+    }
+    function clear() {
+        document.getElementById("celsius").value = "";
+        document.getElementById("result").innerHTML = "";
+    }
+    function save() {
+        //get values
+        //call the API to save
+        clear();
+
+    }
+    function convertToFahrenheit() {
+        //var temp = document.getElementById("celsius").value;
+        var temp = document.querySelector('#celsius').value;
+
+        fahrenheit = (temp * 9 / 5) + 32;
+        element = document.getElementById("result");
+        element.innerHTML = temp + "C is equal to " + fahrenheit + " F.";
+
+        if (temp > 35) {
+            element.style.color = "red";
+        } else {
+            element.style.color = "green";
+        }
+
+
+    }
+</script>
+
+</html>

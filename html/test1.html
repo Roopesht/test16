@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <style>
+        .notification {
+            background: #83bbe1;
+            border-left: 4px solid #0284c7;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h3 {
+            margin: 0;
+            color: #dc3ab3;
+        }
+
+        button {
+            background: #0284c7;
+            color: white;
+            padding: 10px 20px;
+            border: 1 solid #0ece22;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="notification">
+        <h3>New Message</h3>
+        <p>You have a new notification from your team</p>
+        <button>View Details</button>
+    </div>
+</body>
+
+<script>
+    // Making it interactive
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+  alert('Showing notification details...');
+  // Could fetch details from server
+  // Could animate the card
+  // Could update other parts of the page
+});
+</script>
+</html>

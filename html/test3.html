@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <style>
+        .label_imp {
+            color: blue;
+            font-weight: bold;
+        }
+        .label_urgent {
+            background-color: rgb(188, 100, 100);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label class="label_imp" for="name">Name:</label>
+        <input type="text" id="name" required><br>
+
+        <label class="label_imp" for="name">Password:</label>
+        <input type="password" id="name" required><br>
+
+        <label class="label_imp label_urgent" for="email">Email:</label>
+        <input type="email" id="email" required><br>
+
+        <label class="label_urgent" for="priority">Priority:</label>
+        <select id="priority">
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+        </select><br>
+
+        <label>
+            <input type="checkbox"> Send me updates
+        </label>
+        <br>
+        <button type="submit">Send Message</button>
+        <br>
+    </form>
+
+    <div data-product-id="12345" data-price="29.99">
+  Product Card
+</div>
+</body>
+
+</html>
