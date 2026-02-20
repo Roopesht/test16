@@ -7,7 +7,7 @@ import TodoList from './todolist';
 import Timer from './timer';
 import PeopleSearch from './PeopleSearch';
 import Counter from './counter';
-
+import MapFunc from './mapfunction';
 import Login from './loginfunctions';
 
 
@@ -24,10 +24,12 @@ function App() {
         <Greeting name="Roopesh" title="Mr" />
         <Counter />
         <TodoList />
-        */}
-
         <Counter />
+        <PeopleSearch />
         <Login/>
+        */}
+        <MapFunc />
+
         
       </div>
     </>
