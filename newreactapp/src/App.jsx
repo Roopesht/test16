@@ -2,9 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-//import RenderMarksSheet from './rendermarks' 
+//import RenderMarksSheet from './rendermarks'
 import TodoList from './todolist';
 import Timer from './timer';
+import PeopleSearch from './PeopleSearch';
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
   return (
     <>
       <div>
-        {/* 
+        <h1> abc </h1>
+        {/*
         <Greeting name="Roopesh" title="Mr" />
         <RenderMarksSheet name="Roopesh" maths={85} science={90} english={80} social={75} />
         <Greeting name="Roopesh" title="Mr" />
@@ -22,8 +24,7 @@ function App() {
         */}
 
         <Timer />
-
-
+        <PeopleSearch />
 
       </div>
     </>
