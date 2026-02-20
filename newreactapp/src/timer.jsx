@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 function Timer() {
     const [count, setCount] = useState(0);
+    const [name, setName] = useState("Roopesh");
     useEffect(() => {
         const timer = setInterval(() => {
             setCount(prevCount => prevCount + 50);

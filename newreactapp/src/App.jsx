@@ -6,6 +6,9 @@ import './App.css'
 import TodoList from './todolist';
 import Timer from './timer';
 import PeopleSearch from './PeopleSearch';
+import Counter from './counter';
+
+import Login from './loginfunctions';
 
 
 function App() {
@@ -23,9 +26,9 @@ function App() {
         <TodoList />
         */}
 
-        <Timer />
-        <PeopleSearch />
-
+        <Counter />
+        <Login/>
+        
       </div>
     </>
   )
@@ -33,16 +36,6 @@ function App() {
 
 function Greeting(props) {
   return <h1>hello {props.title}. {props.name}</h1> ;
-}
-function Counter() {
-  const [count, setCount] = useState(0);
-  return (
-    <div>
-      <h2>Counter: {count}</h2>
-      <button style={{backgroundColor: 'blue', color: 'white'}} onClick={() => setCount(count + 1)}>Increment</button>
-      <button style={{backgroundColor: 'red', color: 'white'}} onClick={() => setCount(count - 1)}>Decrement</button>
-    </div>
-  );
 }
 
 
