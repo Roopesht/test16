@@ -10,7 +10,7 @@ import Counter from './counter';
 import MapFunc from './mapfunction';
 import Login from './loginfunctions';
 
-
+import GroceryList from './grocery';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -27,9 +27,10 @@ function App() {
         <Counter />
         <PeopleSearch />
         <Login/>
-        */}
         <MapFunc />
+        */}
 
+        <GroceryList />
         
       </div>
     </>

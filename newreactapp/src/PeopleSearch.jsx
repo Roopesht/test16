@@ -11,10 +11,6 @@ function PeopleSearch() {
     return fullName.includes(query.toLowerCase());
   });
 
-  const handleCardClick = (person) => {
-    setSelected(selected?.firstName === person.firstName && selected?.lastName === person.lastName ? null : person);
-  };
-
   return (
     <div className="people-search">
       <input
@@ -29,7 +25,6 @@ function PeopleSearch() {
           <div
             key={idx}
             className={`people-card ${selected?.firstName === person.firstName && selected?.lastName === person.lastName ? 'people-card--selected' : ''}`}
-            onClick={() => handleCardClick(person)}
           >
             <h3>{person.firstName} {person.lastName}</h3>
             <p>{person.speciality}</p>
