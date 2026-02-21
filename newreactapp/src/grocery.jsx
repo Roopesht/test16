@@ -1,6 +1,6 @@
 import { useState } from 'react';
 export default function GroceryList() {
-    const [itemlist, setItemlist] = useState([ {'name': 'beets', 'purchased': true} , {'name': 'carrots', 'purchased': false} ])
+    const [itemlist, setItemlist] = useState([  ])
     const [newItem, setNewItem ] = useState("");
     function addItem(){
         const newobj = {'name': newItem, 'purchased': false};
@@ -13,7 +13,6 @@ export default function GroceryList() {
         );
         setItemlist (tmp);
     }
-
     return (
         <div>
             <ul>
@@ -26,10 +25,9 @@ export default function GroceryList() {
                 </li>
                 )}
             </ul>
-
+            {itemlist.length === 0 ? <p>Please add items below</p> : <></> }
             <input type="text" value={newItem} onChange={(e) => setNewItem(e.target.value)} ></input>
             <button onClick={addItem} >Add</button>
         </div>
     )
-
 }
