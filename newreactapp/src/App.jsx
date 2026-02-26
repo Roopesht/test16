@@ -9,15 +9,25 @@ import PeopleSearch from './PeopleSearch';
 import Counter from './counter';
 import MapFunc from './mapfunction';
 import Login from './loginfunctions';
+import FormExample from './form';
+import FeedbackForm from './feedback_form';
+import FeedbackList from './feedback_list';
+
 
 import GroceryList from './grocery';
+import GreetingService from './GreetingService';
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [feedbacks, setFeedbacks] = useState([]);
+
+  function addFeedback(text) {
+    setFeedbacks([...feedbacks, text]);
+  }
 
   return (
     <>
       <div>
-        <h1> abc </h1>
         {/*
         <Greeting name="Roopesh" title="Mr" />
         <RenderMarksSheet name="Roopesh" maths={85} science={90} english={80} social={75} />
@@ -28,17 +38,20 @@ function App() {
         <PeopleSearch />
         <Login/>
         <MapFunc />
+        <Timer />
+        <FeedbackForm onAdd={addFeedback} />
+        <FeedbackList items={feedbacks } />
+
         */}
 
-        <GroceryList />
-        
+        <GreetingService />
       </div>
     </>
   )
 }
 
 function Greeting(props) {
-  return <h1>hello {props.title}. {props.name}</h1> ;
+  
 }
 
 
