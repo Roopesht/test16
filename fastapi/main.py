@@ -14,3 +14,8 @@ app.add_middleware(
 @app.get("/greet")
 def greet():
     return {"message": "Hello, Roopesh!"}
+
+@app.get("/hello")
+def hellofun():
+    return {"message": "Hello, Roopesh!"}
+
