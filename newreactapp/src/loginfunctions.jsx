@@ -27,12 +27,14 @@ export default  function Login() {
             body:  JSON.stringify ({name:name, password: pwd})
         });
         const data = await resp.json()
+        //alert (JSON.stringify (data))
+
         setLoading(false)
         if( data.success) 
             setStatus("Successful")
         else {
-            setStatus("Login failed")
-            setErrMsg(data.message)
+            //setStatus(data.detail[0]?.msg)
+            setErrMsg(data.detail[0]?.msg)
 
         }
 

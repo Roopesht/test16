@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from fastapi.middleware.cors import CORSMiddleware
 import time
 app = FastAPI()
@@ -31,14 +31,14 @@ def get_items(item_id: int):
     return ({"message": f"Details of item_id = {item_id}"})
 
 class LoginObj(BaseModel):
-    name: str
+    name: str=Field(min_length=5, max_length=50)
     password: str
 
 credentials = {"roopesh": "roopesh1", "kiran": "pwd", "vishwa": "1", "rohit":"r"}
 
+# uvicorn main:app 
 @app.post("/login")
 def login_func(cred: LoginObj):
-    time.sleep(2)
     print (f"Received login credentials: name: {cred.name} and password: {cred.password}")
     expected_pwd = credentials.get (cred.name, "not found")
     if     cred.password == expected_pwd:
