@@ -29,6 +29,7 @@ def get_books():
 # DELETE
 @app.delete("/books/{book_id}")
 def delete_book(book_id: int):
-    # Remove book logic here
+    global books
+    # Delete if the book_id exists
+    books = [book for book in books if book['id'] != book_id]
     return {"message": "Book deleted"}
-

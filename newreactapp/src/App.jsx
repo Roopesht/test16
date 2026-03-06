@@ -12,7 +12,7 @@ import Login from './loginfunctions';
 import FormExample from './form';
 import FeedbackForm from './feedback_form';
 import FeedbackList from './feedback_list';
-
+import BookManager from './book_manager';
 
 import GroceryList from './grocery';
 import GreetingService from './GreetingService';
@@ -42,9 +42,10 @@ function App() {
         <FeedbackForm onAdd={addFeedback} />
         <FeedbackList items={feedbacks } />
         <GreetingService />
+        <Login/>
 
         */}
-        <Login/>
+        <BookManager />
 
       </div>
     </>
