@@ -28,6 +28,13 @@ export default  function Login() {
         });
         const data = await resp.json()
         //alert (JSON.stringify (data))
+        //unicode 
+        //sql = f"select * from user where uid='{name}'
+
+
+        query = "selct * from user where uid = ?"
+        db.execute(query, )
+
 
         setLoading(false)
         if( data.success) 
@@ -48,10 +55,12 @@ export default  function Login() {
         {loggedIn ? <Dashboard /> : 
             <div>
                 <h1>Login</h1> <br />
-                user name: <input value={name} onChange={(e) => setName(e.target.value)} ></input><br />
+                <form onSubmit={login}>
+                user name: <input value={name} onChange={(e) => setName(e.target.value)} minLength={5} ></input><br />
                 password: <input value={pwd} onChange={(e) => setPwd(e.target.value)} type="password" ></input><br />
 
-                <button onClick={login} >Login</button>
+                <input type="submit" value="Submit" ></input>
+                </form>
                 {loading && <p> Its loading, please wait!</p>}
 
                 <p style={{'color': 'red'}}> {errMsg} </p> 
